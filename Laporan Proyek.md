@@ -3,11 +3,6 @@
 ### Oleh Fitri Fatma Dewi (MC004D5X1425)
 ---
 
-## Daftar Isi
-
----
-
-
 ## **I. Domain Proyek: Finansial – Risiko Kredit dan Inklusi Keuangan**
 
 Risiko kredit merupakan aspek krusial dalam sistem keuangan karena berhubungan langsung dengan kelangsungan bisnis lembaga keuangan dan stabilitas ekonomi. Ketidakmampuan dalam mengelola risiko ini dapat menyebabkan tingginya *non-performing loans (NPL)* yang berdampak pada kerugian finansial institusi dan berkurangnya akses masyarakat terhadap layanan keuangan.
@@ -157,7 +152,8 @@ Untuk menjaga integritas data namun tetap mengurangi pengaruh ekstrem, **penanga
 
 Visualisasi data setelah dilakukan Winsorizing ditunjukkan pada boxplot berikut:
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/077bcc31-e38e-451f-a8cd-408fca0ef022)
+
 
 Dengan penerapan metode ini, distribusi data menjadi lebih representatif dan tidak terlalu dipengaruhi oleh nilai-nilai ekstrem, sehingga analisis berikutnya dapat dilakukan dengan hasil yang lebih reliabel.
 
@@ -182,15 +178,14 @@ Berdasarkan statistika deskriptif di atas didapatkan beberapa informasi penting,
 - Skor kredit pemohon umumnya berada di level menengah (rata-rata 633).
 
 #### **Distribusi Kelas pada Fitur Target**
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/4dbb91ff-25cb-4c73-9249-e8e21177aaea)
 
 Distribusi kelas target pada variabel `loan_status` menunjukkan ketidakseimbangan yang cukup signifikan. Kelas **0** (pinjaman tidak disetujui) mendominasi dataset, sementara kelas **1** (pinjaman disetujui) hanya mencakup sekitar **22,2%** dari total data. Ketimpangan distribusi ini perlu menjadi perhatian karena dapat memengaruhi kinerja model prediksi, terutama dalam hal akurasi terhadap kelas minoritas.
 
 Oleh karena itu, pada tahap pelatihan model nantinya, akan dilakukan penyesuaian melalui metode **SMOTE (Synthetic Minority Oversampling Technique)**. Teknik ini digunakan untuk meningkatkan representasi kelas minoritas dengan cara membuat sampel sintetis, sehingga model dapat belajar secara lebih seimbang dari kedua kelas yang ada.
 
 #### **Distribusi Fitur Numerik**
-
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/8e245f48-e103-4b4f-8fe1-3c2ff0047d28)
 
 Berdasarkan grafik di atas, didapatkan informasi sebagai berikut:
 **1. Distribusi person_age**  
@@ -229,7 +224,7 @@ Skor kredit pemohon membentuk distribusi mendekati normal dengan rata-rata di ki
 
 
 #### **Visualisasi Distribusi Tiap Fitur kategorik**
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/4826d271-0e8e-4799-918c-eba10c808368)
 
 Berdasarkan visualisasi di atas, didapatkan beberapa informasi penting antara lain:
 
@@ -315,6 +310,7 @@ Langkah-langkah yang dilakukan:
 2. Data target (`y`) adalah kolom `loan_status`.
 3. Model Random Forest dilatih untuk menilai pentingnya setiap fitur.
 4. Hasil feature importance divisualisasikan dalam bentuk bar chart horizontal untuk interpretasi yang lebih jelas.
+![image](https://github.com/user-attachments/assets/4103ebd7-86e6-4e3e-89e9-02158074d222)
 
 Berikut adalah hasil fitur-fitur yang memiliki tingkat kepentingan di atas _threshold_ 0.01:
 ```python
@@ -467,14 +463,17 @@ Evaluasi dilakukan pada data testing dengan hasil sebagai berikut:
 ### Visualisasi Evaluasi
 
 * **ROC Curve**: Grafik menunjukkan bahwa XGBoost memiliki kurva ROC yang lebih tinggi dibanding Logistic Regression, mengindikasikan kemampuan pemisahan kelas yang lebih baik. Skor AUC untuk XGBoost juga lebih baik dibandingkan Logistic Regression.
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/372de6f0-d20e-46d9-8194-31401fdaca3e)
+
 
 * **Confusion Matrix**: Visualisasi matriks kebingungan memperlihatkan distribusi prediksi benar dan salah untuk masing-masing model, memberikan gambaran rinci kesalahan klasifikasi.
-![alt text](image-5.png)
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/918ac774-726e-4f94-a70d-26c5966212bc)
+![image](https://github.com/user-attachments/assets/f6c26811-2184-45de-8d31-5281ebc77760)
+
 
 * **Train dan Test Accuracy**: XGBoost memiliki akurasi pelatihan yang lebih tinggi (0.9443) dibandingkan Logistic Regression (0.8547), dan juga performa testing yang lebih baik, namun tidak menunjukkan tanda overfitting yang signifikan.
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/c2fe93f0-dd12-4ee7-96c9-d1c1fb35cbca)
+
 
 ### Kesimpulan
 
