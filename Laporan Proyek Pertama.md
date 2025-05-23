@@ -167,7 +167,8 @@ Oleh karena itu, pada tahap pelatihan model nantinya, akan dilakukan penyesuaian
 #### **Distribusi Fitur Numerik**
 Selanjutnya, dilakukan visualisasi untuk memahami pola sebaran setiap variabel. Hal ini membantu mengidentifikasi apakah data berdistribusi normal, mencurigai adanya outlier, serta menentukan kebutuhan transformasi data di tahap selanjutnya.
 
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/12d991a1-5fe8-4a2a-966e-d5dc12a51a98)
+
 
 ## Interpretasi Distribusi Data Numerik
 
@@ -200,7 +201,8 @@ Selanjutnya, dilakukan identifikasi jumlah kategori unik pada setiap fitur kateg
 #### **Visualisasi Distribusi Tiap Fitur kategorik**
 Setelah mengetahui jumlah kategori unik, dilakukan visualisasi untuk setiap variabel kategorik guna melihat distribusi frekuensinya dengan lebih jelas. Visualisasi ini membantu mengidentifikasi ketidakseimbangan antar kategori, pola dominasi kelas tertentu, serta potensi perlunya pengelompokan ulang kategori pada tahap persiapan data.
 
-![image](https://github.com/user-attachments/assets/4826d271-0e8e-4799-918c-eba10c808368)
+![image](https://github.com/user-attachments/assets/a6b1848e-8669-41d0-a931-f1e735ec7e13)
+
 
 Berdasarkan visualisasi di atas, didapatkan beberapa informasi penting antara lain:
 
@@ -280,7 +282,7 @@ Untuk menjaga integritas data namun tetap mengurangi pengaruh ekstrem, **penanga
 
 Visualisasi data setelah dilakukan Winsorizing ditunjukkan pada boxplot berikut:
 
-![alt text](image-9.png)
+![image](https://github.com/user-attachments/assets/d1f5bf07-da97-40f6-9a01-96940456c1a7)
 
 Dengan penerapan metode ini, distribusi data menjadi lebih representatif dan tidak terlalu dipengaruhi oleh nilai-nilai ekstrem, sehingga analisis berikutnya dapat dilakukan dengan hasil yang lebih reliabel.
 
@@ -345,7 +347,8 @@ Langkah-langkah yang dilakukan:
 2. Data target (`y`) adalah kolom `loan_status`.
 3. Model Random Forest dilatih untuk menilai pentingnya setiap fitur.
 4. Hasil feature importance divisualisasikan dalam bentuk bar chart horizontal untuk interpretasi yang lebih jelas.
-![image](https://github.com/user-attachments/assets/4103ebd7-86e6-4e3e-89e9-02158074d222)
+
+![image](https://github.com/user-attachments/assets/b0d5cde0-1a0c-403b-a2a7-17767e7f73f1)
 
 Berikut adalah hasil fitur-fitur yang memiliki tingkat kepentingan di atas _threshold_ 0.01:
 | Feature                         | Importance  |
